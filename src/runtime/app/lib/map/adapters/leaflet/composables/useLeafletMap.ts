@@ -1,5 +1,5 @@
 import type * as Leaflet from "leaflet";
-import { DomUtil, divIcon, featureGroup, marker, popup } from "leaflet";
+import * as L from "leaflet";
 import {
   type ShallowRef,
   computed,
@@ -150,7 +150,7 @@ function useLeafletMap({
     );
 
     return {
-      icon: divIcon({
+      icon: L.divIcon({
         className: "base-map-marker-icon",
         html: buildLeafletMarkerIconHtml(iconUri),
         iconAnchor: [16, 16],
@@ -190,7 +190,7 @@ function useLeafletMap({
   }
 
   async function createLeafletMarker(markerData: MapMarker) {
-    const leafletMarker = marker(
+    const leafletMarker = L.marker(
       [markerData.coords.lat, markerData.coords.lng],
       await createMarkerOptions(markerData),
     );
@@ -220,7 +220,7 @@ function useLeafletMap({
       chunkedLoading: true,
       disableClusteringAtZoom: clusterOptions.value.maxZoom,
       iconCreateFunction: (cluster: { getChildCount(): number }) => {
-        return divIcon({
+        return L.divIcon({
           className: "base-map-cluster-icon",
           html: buildLeafletClusterHtml(cluster.getChildCount(), props.theme),
           iconAnchor: [24, 24],
@@ -238,13 +238,13 @@ function useLeafletMap({
     }
 
     const markers: Leaflet.Marker[] = clusterMarkers.map((location) => {
-      const leafletMarker = marker([location.lat, location.lng], {
+      const leafletMarker = L.marker([location.lat, location.lng], {
         title: location.name,
         ...location.options,
       });
 
       if (location.popup) {
-        const popupRoot = DomUtil.create("div", "popup");
+        const popupRoot = L.DomUtil.create("div", "popup");
         popupRoot.innerHTML = location.popup;
         leafletMarker.bindPopup(popupRoot);
       }
@@ -272,7 +272,7 @@ function useLeafletMap({
   }
 
   async function createFeatureGroup(syncToken: number) {
-    const nextFeatureGroup = featureGroup();
+    const nextFeatureGroup = L.featureGroup();
     const leafletMarkers = await Promise.all(
       props.markers.map((markerData) => createLeafletMarker(markerData)),
     );
@@ -332,7 +332,7 @@ function useLeafletMap({
   function initPopup() {
     if (!mapInstance.value || popupInstance.value) return;
 
-    popupInstance.value = popup({
+    popupInstance.value = L.popup({
       autoClose: true,
       className: "base-map-leaflet-popup",
       closeButton: false,
