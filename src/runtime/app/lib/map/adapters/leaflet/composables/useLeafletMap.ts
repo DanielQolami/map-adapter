@@ -1,5 +1,6 @@
 import type * as Leaflet from "leaflet";
-import L from "leaflet";
+import * as L from "leaflet";
+import { popup } from "leaflet";
 import {
   type ShallowRef,
   computed,
@@ -332,7 +333,7 @@ function useLeafletMap({
   function initPopup() {
     if (!mapInstance.value || popupInstance.value) return;
 
-    popupInstance.value = L.popup({
+    popupInstance.value = popup({
       autoClose: true,
       className: "base-map-leaflet-popup",
       closeButton: false,
