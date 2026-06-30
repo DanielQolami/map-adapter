@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.1.7
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v0.0.11...v0.1.7)
+
+### 🏡 Chore
+
+- **release:** V0.0.11 ([bd7a8f0](https://github.com/DanielQolami/map-adapter/commit/bd7a8f0))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v0.0.11
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v0.0.11...v0.0.11)
