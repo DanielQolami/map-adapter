@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.11
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.10...v0.0.11)
+
+### 📖 Documentation
+
+- Update readme, to NOT use leaflet ([b422272](https://github.com/DanielQolami/map-adapter/commit/b422272))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v1.0.10
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.9...v1.0.10)
