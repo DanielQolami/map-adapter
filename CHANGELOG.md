@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.10
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.9...v1.0.10)
+
+### 🩹 Fixes
+
+- Change back the "import * as L from 'leaflet'" and also, import Popup from leaflet, separately ([bc8fc59](https://github.com/DanielQolami/map-adapter/commit/bc8fc59))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v1.0.9
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.8...v1.0.9)
