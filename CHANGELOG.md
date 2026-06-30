@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.9
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.8...v1.0.9)
+
+### 🩹 Fixes
+
+- Use "import L" instead of "import * as L" for leaflet to fix "popup not a function" error ([9d093d8](https://github.com/DanielQolami/map-adapter/commit/9d093d8))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v1.0.8
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.7...v1.0.8)
