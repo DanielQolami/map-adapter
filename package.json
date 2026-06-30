@@ -1,8 +1,8 @@
 {
   "name": "@dq/map-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Map component that acts as an adapter to choose between different maps",
-  "repository": "your-org/map-adapter",
+  "repository": "DanielQolami/map-adapter",
   "license": "MIT",
   "type": "module",
   "exports": {
