@@ -1,6 +1,6 @@
 {
   "name": "@dq/map-adapter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Map component that acts as an adapter to choose between different maps",
   "repository": "your-org/map-adapter",
   "license": "MIT",
@@ -40,6 +40,7 @@
     "@iconify/utils": "^3.1.3",
     "@nuxt/kit": "^4.4.8",
     "@nuxtjs/leaflet": "^1.3.2",
+    "defu": "^6.1.7",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",
     "ol": "^10.9.0"
