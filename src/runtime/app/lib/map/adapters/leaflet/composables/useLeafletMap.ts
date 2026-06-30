@@ -332,7 +332,7 @@ function useLeafletMap({
   function initPopup() {
     if (!mapInstance.value || popupInstance.value) return;
 
-    popupInstance.value = L.popup({
+    popupInstance.value = L.popup([0, 0], {
       autoClose: true,
       className: "base-map-leaflet-popup",
       closeButton: false,
