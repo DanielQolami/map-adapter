@@ -3,6 +3,10 @@
 
 ## v0.0.11
 
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v0.0.11...v0.0.11)
+
+## v0.0.11
+
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.10...v0.0.11)
 
 ### 📖 Documentation
