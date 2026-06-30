@@ -1,4 +1,3 @@
-
 <!--
 Get your module up and running quickly.
 
@@ -82,9 +81,15 @@ Key internals:
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxt module add @daniel-qolami/map-adapter
-// or
 pnpm add @daniel-qolami/map-adapter
+```
+
+add it manually in `nuxt.config.ts`:
+
+```ts
+export default defineNuxtConfig({
+  modules: ["@daniel-qolami/map-adapter"],
+});
 ```
 
 Then use `MapAdapter` in your pages/components as provided by the module.
@@ -95,28 +100,28 @@ Use the adapter facade as the provider-agnostic entry point:
 
 ```vue
 <script setup lang="ts">
-  const mapCenter = { lat: 34.0522, lng: -118.2437 }; // Los Angeles (GTA V vibe)
+const mapCenter = { lat: 34.0522, lng: -118.2437 }; // Los Angeles (GTA V vibe)
 
-  const pointsOfInterest: MapMarker[] = [
-    {
-      id: 1,
-      coords: { lat: 34.0522, lng: -118.2437 },
-      icon: "i-lucide-coffee",
-      title: "Bean Machine",
-      description: "Best coffee in LS",
-    },
-    {
-      id: 2,
-      coords: { lat: 34.053, lng: -118.24 },
-      icon: "i-lucide-utensils",
-      title: "Burger Shot",
-      description: "Bleeder burger meal",
-    },
-  ];
+const pointsOfInterest: MapMarker[] = [
+  {
+    id: 1,
+    coords: { lat: 34.0522, lng: -118.2437 },
+    icon: "i-lucide-coffee",
+    title: "Bean Machine",
+    description: "Best coffee in LS",
+  },
+  {
+    id: 2,
+    coords: { lat: 34.053, lng: -118.24 },
+    icon: "i-lucide-utensils",
+    title: "Burger Shot",
+    description: "Bleeder burger meal",
+  },
+];
 
-  function handleMarkerClick(marker: MapMarker) {
-    console.info("Clicked:", marker.title);
-  }
+function handleMarkerClick(marker: MapMarker) {
+  console.info("Clicked:", marker.title);
+}
 </script>
 
 <template>
@@ -140,44 +145,45 @@ Use the adapter facade as the provider-agnostic entry point:
 <details>
   <summary>Local development</summary>
 
-  ```bash
-  # Install dependencies
-  npm i
-  // or
-  pnpm i
+```bash
+# Install dependencies
+npm i
+// or
+pnpm i
 
-  # Generate type stubs
-  npm run dev:prepare
-  // or
-  pnpm dev:prepare
+# Generate type stubs
+npm run dev:prepare
+// or
+pnpm dev:prepare
 
-  # Develop with the playground
-  npm run dev
-  // or
-  pnpm dev
+# Develop with the playground
+npm run dev
+// or
+pnpm dev
 
-  # Build the playground
-  npm run dev:build
-  // or
-  pnpm dev:build
+# Build the playground
+npm run dev:build
+// or
+pnpm dev:build
 
-  # Run ESLint
-  npm run lint
-  // or
-  pnpm lint
+# Run ESLint
+npm run lint
+// or
+pnpm lint
 
-  # Run Vitest
-  npm run test
-  npm run test:watch
-  // or
-  pnpm test
-  pnpm test:watch
+# Run Vitest
+npm run test
+npm run test:watch
+// or
+pnpm test
+pnpm test:watch
 
-  # Release new version
-  npm run release
-  // or
-  pnpm release
-  ```
+# Release new version
+npm run release
+// or
+pnpm release
+```
+
 </details>
 
 <!-- Badges -->
