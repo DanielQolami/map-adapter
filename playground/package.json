@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "map-adapter-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@dq/map-adapter": "latest",
+    "nuxt": "^4.4.8"
+  }
+}
