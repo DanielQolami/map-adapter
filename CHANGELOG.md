@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v1.0.7
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.6...v1.0.7)
+
+### 🩹 Fixes
+
+- Leaflet import as L, because it is distributed as a UMD/CommonJS library, not as a true ESM package ([65bb7dd](https://github.com/DanielQolami/map-adapter/commit/65bb7dd))
+
+### 📖 Documentation
+
+- Update "quick setup" in readme ([391c646](https://github.com/DanielQolami/map-adapter/commit/391c646))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v1.0.6
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.5...v1.0.6)
