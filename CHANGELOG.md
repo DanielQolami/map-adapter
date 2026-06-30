@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.6
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.5...v1.0.6)
+
+### 🏡 Chore
+
+- **release:** V1.0.5 ([74acb90](https://github.com/DanielQolami/map-adapter/commit/74acb90))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v1.0.5
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.5...v1.0.5)

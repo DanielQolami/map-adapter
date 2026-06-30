@@ -8,7 +8,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@dq/map-adapter": "latest",
+    "@daniel-qolami/map-adapter": "latest",
     "nuxt": "^4.4.8"
   }
 }

@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ["@dq/map-adapter"],
+  modules: ["@daniel-qolami/map-adapter"],
   devtools: { enabled: true },
   compatibilityDate: "latest",
   mapAdapter: {},

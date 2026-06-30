@@ -38,7 +38,7 @@ const MAP_OPTIMIZE_DEPS = [
 // export default defineNuxtModule<ModuleOptions>({
 export default defineNuxtModule({
   meta: {
-    name: "@dq/map-adapter",
+    name: "@daniel-qolami/map-adapter",
     configKey: "mapAdapter",
     compatibility: {
       nuxt: ">=4.4.0",
@@ -100,6 +100,7 @@ export default defineNuxtModule({
       },
     );
 
+    // export component
     addComponent({
       name: "MapAdapter",
       filePath: resolver.resolve("runtime/app/components/MapAdapter.vue"),
