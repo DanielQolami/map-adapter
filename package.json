@@ -1,6 +1,6 @@
 {
   "name": "@daniel-qolami/map-adapter",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A Map component that acts as an adapter to choose between different maps",
   "repository": "DanielQolami/map-adapter",
   "license": "MIT",

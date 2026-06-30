@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.8
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.7...v1.0.8)
+
+### 🩹 Fixes
+
+- Trying two arguments on leaflet `popup`, to fix the "not a function" error ([8b4733a](https://github.com/DanielQolami/map-adapter/commit/8b4733a))
+
+### ❤️ Contributors
+
+- Daniel Qolami <qolamidaniel@gmail.com>
+
 ## v1.0.7
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v1.0.6...v1.0.7)
