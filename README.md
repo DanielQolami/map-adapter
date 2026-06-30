@@ -20,6 +20,15 @@ Reusable local Nuxt 4 map module for this workspace.
 - GitHub: https://github.com/DanielQolami/map-adapter
 - npm: https://www.npmjs.com/package/@daniel-qolami/map-adapter
 
+---
+
+!!! important. because of leaflet's distribution as a UMD/commonJS library, the leaflet portion of this adapter doesn't work.
+You can only work with "openLayers", only. (until today, I have added openLayers and leaflet)
+
+if you want to use leaflet, download the code, place it inside your nuxt project, inside "modules" directory. It will work. (but it won't work when built as a npm package)
+
+---
+
 ## What it is
 
 This module exports a `MapAdapter` component that acts as an adapter facade for using **Leaflet** and **OpenLayers** behind a common API, so the app shell stays provider-agnostic.
