@@ -1,6 +1,6 @@
 import {
   addComponent,
-  addImportsDir,
+  addImports,
   defineNuxtModule,
   createResolver,
 } from "@nuxt/kit";
@@ -68,36 +68,39 @@ export default defineNuxtModule({
     const resolver = createResolver(import.meta.url);
 
     // We can inject our CSS file which includes Tailwind's directives
-    nuxt.options.css.push(resolver.resolve("./runtime/app/assets/main.css"));
+    const css = resolver.resolve("./runtime/app/assets/main.css");
+    if (!nuxt.options.css.includes(css)) {
+      nuxt.options.css.unshift(css);
+    }
 
-    const viteOptions = (nuxt.options.vite = defu(nuxt.options.vite || {}, {
+    const viteOptions = (nuxt.options.vite = defu(nuxt.options.vite ?? {}, {
       optimizeDeps: {
         include: [],
       },
     }));
-    const optimizeDeps = viteOptions.optimizeDeps ?? { include: [] };
-    const include = [...(optimizeDeps.include || [])] as string[];
+
+    const optimizeDeps = (viteOptions.optimizeDeps ??= { include: [] });
+
+    optimizeDeps.include = [
+      ...new Set([
+        ...(optimizeDeps.include ?? []),
+        ...MAP_OPTIMIZE_DEPS,
+      ]),
+    ];
+
     const nuxtOptionsWithLeaflet = nuxt.options as typeof nuxt.options & {
       leaflet?: {
         markerCluster?: boolean;
       };
     };
 
-    for (const dependency of MAP_OPTIMIZE_DEPS) {
-      if (!include.includes(dependency)) {
-        include.push(dependency);
-      }
-    }
-
-    optimizeDeps.include = include;
-
-    // Marker clustering is enabled here so consuming projects do not need to remember it in
-    // their root `nuxt.config.ts` when they copy this module.
+    // Marker clustering is enabled here so consuming projects do not need to
+    // remember it in their root `nuxt.config.ts` when they copy this module.
     nuxtOptionsWithLeaflet.leaflet = defu(
-      nuxtOptionsWithLeaflet.leaflet || {},
       {
         markerCluster: true,
       },
+      nuxtOptionsWithLeaflet.leaflet ?? {},
     );
 
     // export component
@@ -108,6 +111,42 @@ export default defineNuxtModule({
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     // export types
-    addImportsDir(resolver.resolve("./runtime/app/types"));
+    addImports([
+      {
+        name: "MapClusterOptions",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+      {
+        name: "MapMarker",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+      {
+        name: "MapProvider",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+      {
+        name: "MapTheme",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+      {
+        name: "MapThemePalette",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+      {
+        name: "MapTileThemeConfig",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+      {
+        name: "MapThemePalette",
+        type: true,
+        from: resolver.resolve("./runtime/app/types/map.types"),
+      },
+    ]);
   },
 });
