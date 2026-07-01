@@ -1,6 +1,22 @@
 # Changelog
 
 
+## v0.1.8
+
+[compare changes](https://github.com/DanielQolami/map-adapter/compare/v0.1.7...v0.1.8)
+
+### 🩹 Fixes
+
+- Expoting types ([83be18a](https://github.com/DanielQolami/map-adapter/commit/83be18a))
+
+### 🏡 Chore
+
+- Add MIT License to the project ([40044a3](https://github.com/DanielQolami/map-adapter/commit/40044a3))
+
+### ❤️ Contributors
+
+- Daniel Qolami ([@DanielQolami](https://github.com/DanielQolami))
+
 ## v0.1.7
 
 [compare changes](https://github.com/DanielQolami/map-adapter/compare/v0.0.11...v0.1.7)
